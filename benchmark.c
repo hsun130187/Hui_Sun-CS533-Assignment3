@@ -120,7 +120,7 @@ int *process_sizes(char *arg, int *nitems, int *max)
 
 int default_sizes[] =
  { 31, 32, 96, 97, 127, 128, 129, 191, 192, 229, 255, 256, 257,
-    319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767, 768, 769 };
+    319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767, 768, 769,1000 };
 
 int process_arguments(int argc, char **argv, int **sizes_out, int *nsizes_out,
 		      int *nmax_out, FILE ** fout)
@@ -185,7 +185,8 @@ int main(int argc, char **argv)
 
 	/* For each test size */
 	for (int isize = 0; isize < nsizes; ++isize) {
-		/* Create and fill 3 random matrices A,B,C */
+		for (int i=0;i<10;i++){
+			/* Create and fill 3 random matrices A,B,C */
 		int n = test_sizes[isize];
 
 		double *A = buf + 0;
@@ -254,6 +255,8 @@ int main(int argc, char **argv)
 		for (int i = 0; i < n * n; ++i)
 			if (C[i] > 0)
 				die("*** FAILURE *** Error in matrix multiply exceeds componentwise error bounds.\n");
+		}
+		
 	}
 
 	free(buf);
