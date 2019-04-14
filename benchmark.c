@@ -222,7 +222,7 @@ int main(int argc, char **argv)
 		Mflops_s[isize] = Gflops_s * 1000;
 		per[isize] = Gflops_s*100/MAX_SPEED;
 
-		fprintf(outfile, "Size: %d\tMflop/s: %8g\tPercentage:%6.2lf\n", n,
+		fprintf(outfile, "Size: %d\t Time/s: %lf\t Mflop/s: %8g\tPercentage:%6.2lf\n", n,seconds,
 			Mflops_s[isize], per[isize]);
 
 		/* Ensure that error does not exceed the theoretical error bound. */
