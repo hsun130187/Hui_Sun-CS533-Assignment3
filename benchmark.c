@@ -185,7 +185,7 @@ int main(int argc, char **argv)
 
 	/* For each test size */
 	for (int isize = 0; isize < nsizes; ++isize) {
-		for (int i=0;i<10;i++){
+		
 			/* Create and fill 3 random matrices A,B,C */
 		int n = test_sizes[isize];
 
@@ -255,7 +255,7 @@ int main(int argc, char **argv)
 		for (int i = 0; i < n * n; ++i)
 			if (C[i] > 0)
 				die("*** FAILURE *** Error in matrix multiply exceeds componentwise error bounds.\n");
-		}
+		
 		
 	}
 
