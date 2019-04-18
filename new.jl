@@ -8,15 +8,18 @@ for i in 1:27
     seconds=-1
     while seconds<timeout
         A*B
-        seconds=-1*time_ns()
+        #seconds=-1*time_ns()
+        seconds1=time_ns()
         for j in 0:n_iterations
             A*B
         end
-        seconds=seconds+time_ns()
+        #seconds=seconds+time_ns()
+        seconds2=time_ns()
+        seconds=(seconds2-seconds1)/(1.0e9)
         n_iterations=n_iterations*2
-        seconds=seconds/(1.0e9)
+        #seconds=seconds/(1.0e9)
     end
-    
+
     speed=seconds/n_iterations*500
     print("size is ", a[i])
     println("  speed is ",speed)
