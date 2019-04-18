@@ -202,6 +202,7 @@ int main(int argc, char **argv)
 		/* Time a "sufficiently long" sequence of calls to reduce noise */
 		double Gflops_s, seconds = -1.0;
 		double timeout = 0.1;	// "sufficiently long" := at least 1/10 second.
+		double cspeed=0;
 		for (int n_iterations = 1; seconds < timeout; n_iterations *= 2) {
 			/* Warm-up */
 			square_dgemm(n, (double (*)[])A, (double (*)[])B,
@@ -216,13 +217,14 @@ int main(int argc, char **argv)
 
 			/*  compute Gflop/s rate */
 			Gflops_s = 2.e-9 * n_iterations * n * n * n / seconds;
+			cspeed=seconds/n_iterations*500
 		}
 
 		/* Storing Mflop rate and calculating percentage of peak */
 		Mflops_s[isize] = Gflops_s * 1000;
 		per[isize] = Gflops_s*100/MAX_SPEED;
-
-		fprintf(outfile, "Size: %d\t Time/s: %lf\t Mflop/s: %8g\tPercentage:%6.2lf\n", n,seconds,
+         
+		fprintf(outfile, "Size: %d\t Time/s: %lf\t Mflop/s: %8g\tPercentage:%6.2lf\n", n,cspeed,
 			Mflops_s[isize], per[isize]);
 
 		/* Ensure that error does not exceed the theoretical error bound. */
