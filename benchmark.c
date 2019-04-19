@@ -1,7 +1,7 @@
 #include <stdlib.h>		// For: exit, drand48, malloc, free, NULL, EXIT_FAILURE
 #include <stdio.h>		// For: perror
 #include <string.h>		// For: memset
-#include<time.h>
+
 #include <float.h>		// For: DBL_EPSILON
 #include <math.h>		// For: fabs
 
@@ -32,21 +32,6 @@ void reference_dgemm(int N, double ALPHA, double A[N][N], double B[N][N],
 	cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, N, N, N, ALPHA,
 		    (double *)A, N, (double *)B, N, 1.0, (double *)C, N);
 }
-void shu(int a[], int n)  
-{  
-   int index, tmp, i;  
-   srand(time(NULL));  
-   for (i = 0; i <n; i++)  
-    {  
-       index = rand() % (n - i) + i;  
-       if (index != i)  
-         {  
-            tmp = a[i];  
-            a[i] = a[index];  
-            a[index] = tmp;  
-         }  
-    }  
- } 
 
 void usage(char *name)
 {
@@ -180,10 +165,6 @@ int process_arguments(int argc, char **argv, int **sizes_out, int *nsizes_out,
 /* The benchmarking program */
 int main(int argc, char **argv)
 {
-	shu(default_sizes,27);
-	for(int i=0;i<27;i++){
-	    printf("%d\t",default_sizes[i]);
-	}
 	int *test_sizes = NULL, nsizes, nmax;
 	FILE *outfile = NULL;
 	if (process_arguments
