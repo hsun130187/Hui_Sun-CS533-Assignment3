@@ -1,4 +1,5 @@
 using Distributions
+println("matrix multiplication using basic Julia")
 a=[31, 32, 96, 97, 127, 128, 129, 191, 192, 229, 255, 256, 257,
     319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767,768, 769,1000]
 function(multiply(A,B,C))
@@ -36,3 +37,4 @@ for i in 1:27
     print("size is ", a[i])
     println("  speed is ",speed)
 end
+println("end of julia_basic")

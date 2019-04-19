@@ -1,3 +1,5 @@
+using Distributions
+println("Matrix multiplication using julia library")
 a=[31, 32, 96, 97, 127, 128, 129, 191, 192, 229, 255, 256, 257,
     319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767,768, 769,1000]
 for i in 1:27
@@ -11,7 +13,7 @@ for i in 1:27
         A*B
         #seconds=-1*time_ns()
         seconds1=time_ns()
-        for j in 0:n_iterations
+        for j in 1:n_iterations
             A*B
         end
         seconds2=time_ns()
@@ -22,3 +24,4 @@ for i in 1:27
     print("size is ", a[i])
     println("  speed is ",speed)
 end
+println("end of matrix multiplication using julia library")
