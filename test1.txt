@@ -17,7 +17,7 @@ Activating Modules:
 Activating Modules:
   1) gsl-2.3-gcc-7.1.0-oqydlph
 
-Description:	DGEMM with unoptimized loop index order
+Description:	DGEMM with unoptimized loop index order(Basic)
 Size: 31	 Time/s: 0.011459	 Mflop/s:   2599.7	Percentage: 24.34
 Size: 32	 Time/s: 0.012035	 Mflop/s:  2722.81	Percentage: 25.49
 Size: 96	 Time/s: 0.398445	 Mflop/s:  2220.47	Percentage: 20.79

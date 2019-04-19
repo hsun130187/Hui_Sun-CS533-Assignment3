@@ -1,7 +1,9 @@
 using Distributions
+using Random
 println("matrix multiplication using basic Julia")
 a=[31, 32, 96, 97, 127, 128, 129, 191, 192, 229, 255, 256, 257,
     319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767,768, 769,1000]
+b=randperm!(a)
 function(multiply(A,B,C))
     for i in 1:size(A,1)
         for j in 1:size(A,1)
@@ -16,9 +18,9 @@ for i in 1:27
     n_iterations=1
     seconds=-1
     speed=0
-    A=rand(Uniform(-1,1),a[i],a[i])
+    A=rand(Uniform(-1,1),b[i],b[i])
     #A=rand(Uniform(-1,1),6,6)
-    B=rand(Uniform(-1,1),a[i],a[i])
+    B=rand(Uniform(-1,1),b[i],b[i])
     ind=size(A,1)
     C=zeros(ind,ind)
     while seconds<timeout
@@ -34,7 +36,7 @@ for i in 1:27
     end
     #print("iterations is", n_iterations/2)
     #speed=seconds/n_iterations*500
-    print("size is ", a[i])
+    print("size is ", b[i])
     println("  speed is ",speed)
 end
 println("end of julia_basic")
