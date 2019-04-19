@@ -31,8 +31,8 @@ for i in 1:27
         speed=seconds/n_iterations*1000
         n_iterations=n_iterations*2
     end
-    print("iterations is", n_iterations/2)
+    #print("iterations is", n_iterations/2)
     #speed=seconds/n_iterations*500
-    print("  size is ", a[i])
+    print("size is ", a[i])
     println("  speed is ",speed)
 end
