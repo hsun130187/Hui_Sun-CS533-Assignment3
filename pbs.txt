@@ -1,0 +1,525 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=01:00:00
+#PBS -N test1-hui
+#PBS -j oe
+#PBS -m bae
+#PBS -M hsun1991@unm.edu
+#PBS -V
+
+cd $PBS_O_WORKDIR
+
+module load anaconda
+module load openblas-0.2.20-gcc-4.8.5-gqori4j
+module load gsl-2.3-gcc-7.1.0-oqydlph
+module load gnu8/8.2.0
+echo 1th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 2th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 3th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 4th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 5th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 6th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 7th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 8th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 9th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 10th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 11th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 12th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 13th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 14th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 15th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 16th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 17th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 18th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 19th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 20th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 21th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 22th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 23th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 24th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 25th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 26th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 27th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 28th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 29th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
+echo 30th
+./benchmark_col 
+./benchmark_autovect
+./benchmark_blocked
+./benchmark_copy
+./benchmark_blas
+source activate julia
+julia julia_basic.jl
+source deactivate
+./benchmark_row
+./benchmark_rb
+./benchmark_genvect
+./benchmark_basic
+./benchmark_naive
+source activate julia
+julia julia_library.jl
+source deactivate
