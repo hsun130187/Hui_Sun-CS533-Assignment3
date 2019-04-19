@@ -3,7 +3,7 @@ using Random
 println("Matrix multiplication using julia library")
 a=[31, 32, 96, 97, 127, 128, 129, 191, 192, 229, 255, 256, 257,
     319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767,768, 769,1000]
-b=randperm!(a)
+b=shuffle!(a)
 for i in 1:27
     A=rand(Uniform(-1,1),b[i],b[i])
     B=rand(Uniform(-1,1),b[i],b[i])
