@@ -1,8 +1,10 @@
 using Distributions
 using Random
+#this is the program doing matrix multiplication using Julia library
 println("Matrix multiplication using julia library")
 a=[31, 32, 96, 97, 127, 128, 129, 191, 192, 229, 255, 256, 257,
     319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767,768, 769,1000]
+#shuffle the matrix size
 b=shuffle!(a)
 for i in 1:27
     A=rand(Uniform(-1,1),b[i],b[i])
@@ -13,7 +15,7 @@ for i in 1:27
     speed=0
     while seconds<timeout
         A*B
-        #seconds=-1*time_ns()
+        #warm up and then start timer
         seconds1=time_ns()
         for j in 1:n_iterations
             A*B
